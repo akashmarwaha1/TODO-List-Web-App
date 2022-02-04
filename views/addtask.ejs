@@ -1,0 +1,14 @@
+<% for(i=0;i < taskList.length; i++){%>
+    <% if(taskList[i].state==="unclaimed" ){ %>
+        <form action="/claim" method="post">
+            <div class="input-group mb-3 claimClass" id=<%=i %> >
+                <input type="hidden" name="id" class="form-control inputclaim" value=<%=taskList[i]._id %>>
+                <input type="hidden" name="email" value=<%=username%> class="form-control">
+                <input type="text" class="form-control inputclaim" name="claimInputBox" value=<%-
+                    JSON.stringify(taskList[i].text) -%> disabled >
+                <input type="submit" id="claimButton<%=i %> " class="btn btn-outline-secondary" name="claimButton"
+                    value="Claim">
+            </div>
+        </form>
+
+        <% }} %>

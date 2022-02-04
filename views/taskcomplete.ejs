@@ -1,0 +1,20 @@
+<% for(k=0;k < taskList.length; k++){%>
+    <% if(taskList[k].state==="finished" ){ %>
+        <form action="/unfinish" method="post">
+            <div class="input-group mb-3 checkedClass" id=<%=k %> >
+                <input type="hidden" name="id" class="form-control inputclaim" value=<%=taskList[k]._id %>>
+                <input type="hidden" name="email" value=<%=username%> class="form-control">
+                <div class="input-group-text">
+                    <input type="checkbox" class="checkboxClass" name="checkbox" id=newcheckBox<%= k %>
+                        onChange="this.form.submit()" checked>
+                </div>
+                <input type="text" id="inputtext" class="form-control crossLine" value=<%-
+                    JSON.stringify(taskList[k].text) -%> disabled>
+            </div>
+        </form>
+        <% if(username != taskList[k].claimingUser){ %>
+            <script>
+                document.getElementById("newcheckBox<%= k %>").disabled = "true";
+            </script>
+            <% }%>
+                <% }} %>

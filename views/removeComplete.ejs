@@ -1,0 +1,10 @@
+<% for(l=0;l < taskList.length; l++){%>
+    <% if(taskList[l].isTaskCleared===true ){ %>
+        <input type="hidden" name="email" value=<%=username%> class="form-control">
+        <script>
+            // document.getElementById("<%= l %>").classList.add("invisible");
+            // document.getElementById("<%= l %>").style.visibility = "hidden";
+            document.getElementById("<%= l %>").style.display = "none";
+
+        </script>
+        <% }} %>

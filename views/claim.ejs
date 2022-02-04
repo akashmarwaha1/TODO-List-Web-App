@@ -1,0 +1,23 @@
+<% for(j=0;j < taskList.length; j++){%>
+    <% if(taskList[j].state==="unfinished" ){ %>
+        <form action="/abandonorcomplete" method="post">
+            <div class="input-group mb-3 abandonClass" id=<%=j %> >
+                <input type="hidden" name="id" class="form-control inputclaim" value=<%=taskList[j]._id %>>
+                <input type="hidden" name="email" value=<%=username%> class="form-control">
+                <div class="input-group-text">
+                    <input type="checkbox" class="checkboxClass" id=checkBox<%= j  %>  name="abandonCheckBox"
+                        onChange="this.form.submit()">
+                </div>
+                <input type="text" name="abandonInputBox" value=<%- JSON.stringify(taskList[j].text) -%>
+                class="form-control" disabled >
+                <input type="submit" name="abandonButton" id=abandonButton<%= j %>  class="btn btn-outline-secondary"
+                    value="Abandon">
+            </div>
+        </form>   
+ <% } %>
+ <% if(username != taskList[j].claimingUser){ %>
+    <script>
+        document.getElementById("checkBox<%=j%>").disabled = "true";
+        document.getElementById("abandonButton<%=j%>").disabled = "true";
+    </script>
+    <% }} %>

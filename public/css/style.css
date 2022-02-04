@@ -1,0 +1,166 @@
+/* google font imported */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap');
+
+body{
+    height: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+/* index container  */
+#containerIndex{
+    max-width: 280px;
+    padding: 0;
+    border-radius: 4px !important;
+    box-shadow: rgba(92, 92, 95, 0.596) 0px 3px 10px 0px;
+}
+
+.accordion-button{
+    width: 100%;
+    align-items: center;
+    text-align: left;
+    border-radius: 4px !important;
+}
+
+
+
+/* section for index.html  */
+#sectionIndex{
+    /* height: 60vh; */
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* for index page titles */
+#toTitle{
+    margin-top: 80px;
+    margin-bottom: 2rem;
+}
+
+#title{
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-form {
+    width: 50x;
+    height: 50px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 4px !important;
+}
+
+input[type=email], input[type=password]{
+    align-items: center;
+    border-radius: 4px !important;
+    margin-bottom: 10px;
+}
+
+#containerTODO{
+    margin-top: 150px;
+    max-width: 400px;
+    padding: 0;
+    border-radius: 4px !important;
+    box-shadow: rgba(92, 92, 95, 0.596) 0px 3px 10px 0px;
+}
+
+
+
+/* ------------------------------------TODO List STYLE......................... */
+
+/* title */
+#todoTitle{
+    margin-top: 100px;
+}
+
+
+/* todolist section  */
+#sectionTODO{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* user button for logout */
+a{
+    align-items: center;
+    text-align:center;
+    border-radius: 4px !important;
+}
+
+
+
+
+/* todolist items container  */
+#containerlogout{
+    max-width: 300px;
+    padding: 0;
+    border-radius: 4px !important;
+    box-shadow: rgba(92, 92, 95, 0.596) 0px 3px 10px 0px;
+}
+
+/* list container  */
+#listcontainer{
+    padding-block: 5px;
+    width: 500px;
+    background: aliceblue;
+    margin-top: 2rem;
+    border-radius: 4px !important;
+    box-shadow: rgba(92, 92, 95, 0.596) 0px 3px 10px 0px;
+
+}
+#loginAsContainer{
+    padding-block: 5px;
+    width: 300px;
+    background: aliceblue;
+    margin-top: 2rem;
+    border-radius: 4px !important;
+    box-shadow: rgba(92, 92, 95, 0.596) 0px 3px 10px 0px;
+}
+/* list elements */
+.mb-3{
+    
+    align-content: center;
+}
+/* logout button  */
+#logButton{
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+/* abandon button  */
+#listbuttonID{
+    margin-block: auto;
+}
+
+
+
+/* list elements */
+.mb-3{
+    margin-top: 5px;
+    align-content: center;
+}
+
+
+.ulList{
+    width: 600px;
+    align-content: center;
+    list-style: none;
+}
+
+#removebutton{
+    padding-bottom: 10px;
+}
+
+
+/* line through for checked tasks  */
+.crossLine{
+    text-decoration: line-through;
+}
+
+
